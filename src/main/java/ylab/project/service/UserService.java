@@ -3,12 +3,14 @@ package ylab.project.service;
 import ylab.project.model.Role;
 import ylab.project.model.User;
 import ylab.project.repository.UserRepository;
+import ylab.project.storage.Storage;
 import ylab.project.storage.UserStorage;
 
 import java.util.Scanner;
 
 public class UserService {
     private UserRepository userRepository;
+    private Storage storage;
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -16,17 +18,14 @@ public class UserService {
 
     public void authUser(){
         User user = getUser();
-        UserStorage.authenticatedUser = user;
+        storage = new UserStorage(user); // тут можно вызывать какой -то метод getStorage() и на основе конфига выбирать куда сохранять
     }
 
     public void regUser(){
         User user = getUser();
-        UserStorage.authenticatedUser = user;
+        storage = new UserStorage(user);
         userRepository.saveUser(user);
     }
-
-
-
 
     public UserRepository getUserRepository() {
         return userRepository;

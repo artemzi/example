@@ -1,6 +1,5 @@
 package ylab.project.controller;
 
-import ylab.project.in.ConsoleReader;
 import ylab.project.service.UserService;
 
 public class AuthController {

@@ -1,11 +1,11 @@
 package ylab.project.model;
 
-import java.util.List;
+import jdk.jshell.spi.ExecutionControl.NotImplementedException;
 
-public abstract class Meter {
-    private Long id;
-    private Long number;
+public interface Meter {
 
 //    public abstract void test();
+    Long getId() throws NotImplementedException;
+    Long getNumber() throws NotImplementedException;
 }
 

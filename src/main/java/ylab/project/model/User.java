@@ -1,10 +1,5 @@
 package ylab.project.model;
 
-import ylab.project.storage.UserStorage;
-
-import java.util.Enumeration;
-import java.util.Objects;
-
 public class User {
     private static Long currentId = 0L;
     private Long id;

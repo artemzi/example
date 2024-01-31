@@ -1,13 +1,13 @@
-package ylab.project.in;
+package ylab.project.service.in;
 
 import ylab.project.controller.AuthController;
-import ylab.project.storage.ConsoleMenuWriter;
+import ylab.project.service.out.ConsoleMenuWriter;
 
 import java.util.Scanner;
 
 public class ConsoleReader {
 
-    private AuthController authController;
+    private final AuthController authController;
 
 
     public ConsoleReader(AuthController authController) {

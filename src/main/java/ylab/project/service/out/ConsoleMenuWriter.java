@@ -1,4 +1,4 @@
-package ylab.project.storage;
+package ylab.project.service.out;
 
 public class ConsoleMenuWriter {
     public static void authMenu(){

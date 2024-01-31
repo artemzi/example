@@ -1,11 +1,9 @@
 package ylab.project;
 
 import ylab.project.controller.AuthController;
-import ylab.project.in.ConsoleReader;
+import ylab.project.service.in.ConsoleReader;
 import ylab.project.repository.UserRepository;
 import ylab.project.service.UserService;
-
-import java.io.PrintStream;
 
 /**
  * Hello world!
