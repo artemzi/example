@@ -8,16 +8,23 @@ import ylab.project.model.User;
 
 public class UserStorage implements Storage {
 
+    private final List<User> users = new ArrayList<>(List.of(new User("admin", "admin")));
 
-    private static User authenticatedUser;
-    public static List<User> users = new ArrayList<>(Arrays.asList(new User("admin", "admin")));
-
-    public UserStorage(User user) {
-        this.authenticatedUser = user;
+    public UserStorage() {
     }
 
     @Override
     public boolean store() throws NotImplementedException {
         throw new NotImplementedException("todo");
+    }
+
+    @Override
+    public void addUsers(User user) {
+        this.users.add(user);
+    }
+
+    @Override
+    public List<User> getUsers() {
+        return this.users;
     }
 }

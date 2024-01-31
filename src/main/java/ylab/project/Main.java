@@ -1,6 +1,7 @@
 package ylab.project;
 
 import ylab.project.controller.AuthController;
+import ylab.project.model.User;
 import ylab.project.service.in.ConsoleReader;
 import ylab.project.repository.UserRepository;
 import ylab.project.service.UserService;

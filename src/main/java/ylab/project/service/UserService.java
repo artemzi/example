@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class UserService {
     private UserRepository userRepository;
-    private Storage storage;
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -18,12 +17,11 @@ public class UserService {
 
     public void authUser(){
         User user = getUser();
-        storage = new UserStorage(user); // тут можно вызывать какой -то метод getStorage() и на основе конфига выбирать куда сохранять
+        // todo
     }
 
     public void regUser(){
         User user = getUser();
-        storage = new UserStorage(user);
         userRepository.saveUser(user);
     }
 
